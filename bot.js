@@ -4,8 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag} !`);
  
-});
- 
+
 var PrEfix = "$";
 client.on('message', message => {
   if (!message.content.startsWith(PrEfix)) return;
@@ -22,11 +21,10 @@ client.user.setActivity(argresult, {type:'LISTENING'});
     message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
 } else 
 if (message.content.startsWith(PrEfix + 'st')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/Baktash_183");
+  client.user.setGame(argresult, "https://www.twitch.tv/amira");
     message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
 }
 
 });
-
 
 client.login(process.env.BOT_TOKEN);
