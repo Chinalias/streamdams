@@ -6,12 +6,6 @@ client.on('ready', () => {
  
 });
  
-client.on('guildMemberAdd' ,member => {
-  if(member.guild.id !== '4623472614') return;
-  setTimeout(function(){
-  member.guild.channels.find(r => r.id === '485545597877').send('Welcome To **Bُubbles** Tumblr .');
-},3000);
-});
 var PrEfix = "$";
 client.on('message', message => {
   if (!message.content.startsWith(PrEfix)) return;
@@ -35,4 +29,4 @@ if (message.content.startsWith(PrEfix + 'st')) {
 });
 
 
-client.login("NDQyMzQ4MzE3NzM3ODc3NTA0.DnWDoQ.KcLDYgxfvF2cyK3_Qz5Way2Ogt4");
+client.login(process.env.BOT_TOKEN);
