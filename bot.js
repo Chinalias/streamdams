@@ -4,7 +4,14 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag} !`);
  
-
+});
+ 
+client.on('guildMemberAdd' ,member => {
+  if(member.guild.id !== '451806679164712714') return;
+  setTimeout(function(){
+  member.guild.channels.find(r => r.id === '451806679747788820').send('Welcome To **Blore** Server .');
+},3000);
+});
 var PrEfix = "$";
 client.on('message', message => {
   if (!message.content.startsWith(PrEfix)) return;
